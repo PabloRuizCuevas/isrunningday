@@ -11,11 +11,11 @@
       {#if $isRunningDay}
       <h1 class="text-center text-9xl">  YES ! </h1>
       <h2 class="text-center text-6xl"> Enjoy :) </h2>
-      <h3 class="text-center text-2xl"> {$time2}</h3>
+      <h3 class="text-center text-2xl"> {$time2} till rest day </h3>
     {:else}
       <h1 class="text-center text-9xl"> NOT YET ! </h1>
       <h2 class="text-center text-6xl"> {$time} </h2>
-      <h2 class="text-center text-6xl"> TO YES </h2> 
+      <h3 class="text-center text-2xl"> till running day </h3> 
     {/if}
   </div>
 </div>

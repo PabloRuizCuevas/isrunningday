@@ -20,7 +20,7 @@ function nsToMidnight() {
 }
 
 function isOddDay(){
-  let diffInMs   = new Date() - new Date('2023-01-01')
+  let diffInMs   = new Date() - new Date('2023-02-01')
   let diffInDays = Math.floor(diffInMs/(1000 * 60 * 60 * 24));
   return Boolean((diffInDays) % 2)
 }
