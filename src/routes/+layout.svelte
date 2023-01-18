@@ -13,12 +13,12 @@
     <link rel="icon" href="./no.png" />
   {/if}
 	<title>IsItRunningDay?</title>
-	<meta property="og:title" content="Is It Runnin Day ?">
-	<meta name="twitter:title" content="Is It Runnin Day?">
+	<meta property="og:title" content="Is It Running Day ?">
+	<meta name="twitter:title" content="Is It Running Day?">
 
-	<meta name="description" content="Is It Runnin Day ?">
-	<meta property="og:description" content="Is It Runnin Day ?">
-	<meta name="twitter:description" content="Is It Runnin Day ?">
+	<meta name="description" content="Is It Running Day ?">
+	<meta property="og:description" content="Is It Running Day ?">
+	<meta name="twitter:description" content="Is It Running Day ?">
 
 	{#if $isRunningDay}
 		<meta property="og:image" content="./yes.png">
