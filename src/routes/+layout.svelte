@@ -12,6 +12,22 @@
   {:else}
     <link rel="icon" href="./no.png" />
   {/if}
+	<title>IsItRunningDay?</title>
+	<meta property="og:title" content="Is It Runnin Day ?">
+	<meta name="twitter:title" content="Is It Runnin Day?">
+
+	<meta name="description" content="Is It Runnin Day ?">
+	<meta property="og:description" content="Is It Runnin Day ?">
+	<meta name="twitter:description" content="Is It Runnin Day ?">
+
+	{#if $isRunningDay}
+		<meta property="og:image" content="./yes.png">
+		<meta name="twitter:image" content="./yes.png">
+	{:else}
+		<meta property="og:image" content="./no.png">
+		<meta name="twitter:image" content="./no.png">
+	{/if}
+
 </svelte:head>
 
 <slot />
