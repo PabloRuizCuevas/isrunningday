@@ -1,5 +1,7 @@
+
+
 <script>
-  import {timer, time, isRunningDay} from './counter'
+  import {timer, time, time2, isRunningDay} from './counter'
   timer.start()
 </script>
 
@@ -10,10 +12,11 @@
       {#if $isRunningDay}
       <h1 class="text-center text-9xl">  YES ! </h1>
       <h2 class="text-center text-6xl"> Enjoy :) </h2>
+      <h3 class="text-center text-2xl"> {$time2}</h3>
     {:else}
       <h1 class="text-center text-9xl"> NOT YET ! </h1>
-      <h2 class="text-center text-6xl"> {$time} seconds</h2>
-      <h2 class="text-center text-6xl"> TO YES</h2> 
+      <h2 class="text-center text-6xl"> {$time} </h2>
+      <h2 class="text-center text-6xl"> TO YES </h2> 
     {/if}
   </div>
 </div>
