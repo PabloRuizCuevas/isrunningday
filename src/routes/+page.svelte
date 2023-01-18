@@ -1,5 +1,3 @@
-
-
 <script>
   import {timer, time, time2, isRunningDay} from './counter'
   timer.start()
@@ -19,4 +17,3 @@
     {/if}
   </div>
 </div>
-

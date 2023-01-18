@@ -16,11 +16,11 @@ const formatter2 = new Intl.DateTimeFormat("de", {
 function nsToMidnight() {
   var msd = 8.64e7;
   var now = new Date();
-  return (msd - (now - now.getTimezoneOffset() * 6e4) % msd)
+  return (msd - (now - 2*now.getTimezoneOffset() * 6e4) % msd)
 }
 
 function isOddDay(){
-  let diffInMs   = new Date() - new Date('2023-01-01')
+  let diffInMs   = new Date() - new Date('2023-01-03') // 00:00:00
   let diffInDays = Math.floor(diffInMs/(1000 * 60 * 60 * 24));
   return Boolean((diffInDays) % 2)
 }
