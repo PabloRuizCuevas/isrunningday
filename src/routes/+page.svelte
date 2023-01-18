@@ -8,7 +8,6 @@
 
 <div class="grid grid-cols-1 place-content-center h-full w-full ">
     <div class="card card-glass p-6 m-auto space-y-6">
-    
       {#if $isRunningDay}
       <h1 class="text-center text-9xl">  YES ! </h1>
       <h2 class="text-center text-6xl"> Enjoy :) </h2>

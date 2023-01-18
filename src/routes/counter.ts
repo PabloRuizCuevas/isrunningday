@@ -28,6 +28,7 @@ function isOddDay(){
 export const COUNTDOWN_FROM = nsToMidnight(); //8.64e7 //
 export const time = writable(formatter.format(COUNTDOWN_FROM));
 export const time2 = writable(formatter2.format(COUNTDOWN_FROM));
+console.log('hola')
 console.log(formatter.format(COUNTDOWN_FROM))
 
 //console.log(time)
