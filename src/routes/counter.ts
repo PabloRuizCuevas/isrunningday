@@ -1,53 +1,46 @@
 import { writable } from "svelte/store";
 
-const formatter = new Intl.DateTimeFormat("de", {
+let config3 = {
   hour: "2-digit",
   minute: "2-digit",
   second: "2-digit",
   fractionalSecondDigits: 3
-});
-
-const formatter2 = new Intl.DateTimeFormat("de", {
-  hour: "2-digit",
-  minute: "2-digit",
-  second: "2-digit",
-});
+}
 
 function nsToMidnight() {
-  var msd = 8.64e7;
-  var now = new Date();
-  return (msd - (now - 2*now.getTimezoneOffset() * 6e4) % msd)
+  // take toLocaleTimeString that is the time of "here" extract ms then convert ms to isoformat (they are not local anymore)
+  let date = new Date().toLocaleTimeString("de", config3)
+  let a = date.split(':').join(',').split(',')
+  let b = 8.64e7 - (Number(a[0]*60*60*1000) + Number(a[1]*60*1000)  + Number(a[2]*1000) + Number(a[3]))
+  return new Date(b).toISOString().slice(11,23)
+}
+
+function sToMidnight() {
+  return nsToMidnight().slice(0,8)
 }
 
 function isOddDay(){
-  let diffInMs   = new Date() - new Date('2023-01-03') // 00:00:00
+  let diffInMs   = new Date() - new Date('2023-01-03 00:00:00') //if not 00:00 then is 01 magic..
   let diffInDays = Math.floor(diffInMs/(1000 * 60 * 60 * 24));
   return Boolean((diffInDays) % 2)
 }
- 
-export const COUNTDOWN_FROM = nsToMidnight(); //8.64e7 //
-export const time = writable(formatter.format(COUNTDOWN_FROM));
-export const time2 = writable(formatter2.format(COUNTDOWN_FROM));
-console.log('hola')
-console.log(formatter.format(COUNTDOWN_FROM))
 
-//console.log(time)
+export const time = writable(sToMidnight());
+export const time2 = writable(nsToMidnight());
 export const isRunningDay = writable(isOddDay());
 
 const createTimer = () => {
   let animationRef;
   let latestStartTime;
-  let remainingTime = COUNTDOWN_FROM;
+  let remainingTime = sToMidnight();
 
   const animate = timestamp => {
     if (latestStartTime === undefined) {
       latestStartTime = timestamp + remainingTime;
     }
     // the time to display now
-    const currentTime = latestStartTime - timestamp;
-    
-    time.set(formatter.format(nsToMidnight()));
-    time2.set(formatter2.format(nsToMidnight()));
+    time.set(sToMidnight());
+    time2.set(nsToMidnight());
     isRunningDay.set(isOddDay())
 
     animationRef = requestAnimationFrame(animate);
