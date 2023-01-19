@@ -54,25 +54,24 @@
 <div class="grid grid-cols-1 place-content-center h-full w-full ">
     <div class="card card-glass p-6 m-auto space-y-6">
       {#if $isRunningDay}  
-        
         <div class="waviy text-center" style="font-size: 40px;">
-        <span style="--i:1"><h1 class="text-9xl">Y</h1></span>
-        <span style="--i:2"><h1 class="text-9xl">E</h1></span>
-        <span style="--i:3"><h1 class="text-9xl">S</h1></span>
-        <span style="--i:4"><h1 class="text-9xl">!</h1></span>
+        <span style="--i:1"><h1 class="text-7xl lg:text-9xl">Y</h1></span>
+        <span style="--i:2"><h1 class="text-7xl lg:text-9xl">E</h1></span>
+        <span style="--i:3"><h1 class="text-7xl lg:text-9xl">S</h1></span>
+        <span style="--i:4"><h1 class="text-7xl lg:text-9xl">!</h1></span>
        </div>
        <!--
         {#if visible}
           <h1 transition:typewriter class="text-center text-9xl waviy">  YES! </h1>
         {/if}
       -->
-      <h2  class="text-center text-6xl">{text}</h2>
-      <h3 class="text-center text-2xl"> {$time} till rest 🛋️ day </h3>
+      <h2  class="text-center text-5x lg:text-6xl">{text}</h2>
+      <h3 class="text-center text-xl lg:text-2xl"> {$time} till rest 🛋️ day </h3>
     {:else}     
-      <h1 class="text-center text-9xl"> {randomAction} </h1>
-      <h2 class="text-center text-6xl"> {$time2} </h2>
+      <h1 class="text-center text-7xl lg:text-9xl"> {randomAction} </h1>
+      <h2 class="text-center text-5x lg:text-6xl"> {$time2} </h2>
       {#if visible}
-        <h3 transition:typewriter class="text-center text-2xl"> Count down till 🏃‍♀️ day </h3> 
+        <h3 transition:typewriter class="text-center text-xl lg:text-2xl"> Count down till 🏃‍♀️ day </h3> 
       {/if}
     {/if}
   </div>
