@@ -20,7 +20,7 @@ function sToMidnight() {
 }
 
 function isOddDay(){
-  let diffInMs   = new Date() - new Date('2023-01-03 00:00:00') //if not 00:00 then is 01 magic..
+  let diffInMs   = new Date() - new Date(2023,0,3,0,0,0);
   let diffInDays = Math.floor(diffInMs/(1000 * 60 * 60 * 24));
   return Boolean((diffInDays) % 2)
 }
