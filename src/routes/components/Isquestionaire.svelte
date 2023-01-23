@@ -1,5 +1,4 @@
 <script>
-  import {takeRandom} from './counter'
   let userRun = 0
   let excuse = 0 
   

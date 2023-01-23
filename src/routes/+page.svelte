@@ -6,9 +6,11 @@
 </script>
 
 <div class="grid grid-cols-1 place-content-center h-full w-full space-y-6 ">
-  {#if !$isRunningDay}  <!-- YES -->
+  {#if $isRunningDay} 
+   <!-- YES -->
    <IsRunning></IsRunning>
   {:else}    
+    <!-- NO -->
     <NotRunning></NotRunning>
   {/if}
 </div>
