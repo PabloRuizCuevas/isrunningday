@@ -1,10 +1,9 @@
 <script>
   let userRun = 0
   let excuse = 0 
-  
 </script>
 
-<div class="card card-glass  m-auto space-y-6">
+<div class="card card-glass m-6 sm:m-auto space-y-6">
   {#if userRun==0}
     <h3 class="text-center text-xl lg:text-2xl m-6"> Did you include running in todays plan? </h3>
     <div class="grid grid-cols-2  gap-4 m-6 pb-4">

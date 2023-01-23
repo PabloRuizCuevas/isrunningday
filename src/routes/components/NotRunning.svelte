@@ -24,8 +24,6 @@
 		};
 	}
 
-
-
   let visible = false;
 
   const noran = ["NOT YET !", "ALMOST THERE", "TOMORROW", "WAIT A BIT", "PATIENCE", 
