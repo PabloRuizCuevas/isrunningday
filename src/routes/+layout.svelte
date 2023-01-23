@@ -3,7 +3,7 @@
 	import '@skeletonlabs/skeleton/styles/all.css';
 	import '../app.postcss';
 
-	import {isRunningDay} from './counter'
+	import {isRunningDay} from './components/counter'
 </script>
 
 <svelte:head>

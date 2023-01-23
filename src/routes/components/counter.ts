@@ -56,3 +56,7 @@ const createTimer = () => {
 };
 
 export const timer = createTimer();
+
+export function takeRandom(list){
+  return  list[Math.floor(Math.random() * list.length)];
+}
