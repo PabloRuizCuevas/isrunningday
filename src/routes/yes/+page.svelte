@@ -1,6 +1,6 @@
 <script>
   import {timer} from '../components/counter';
-  import IsRunning from '../components/IsRunning.svelte';
+  import IsRunning from './IsRunning.svelte';
   timer.start()
 </script>
 
@@ -10,6 +10,6 @@
 </svelte:head>
 
 
-<div class="grid grid-cols-1 place-content-center h-full w-full space-y-6 ">
-  <IsRunning></IsRunning>
+<div class="grid grid-cols-1 place-content-center h-full w-full space-y-4 overflow-auto">
+  <IsRunning/>
 </div>

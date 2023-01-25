@@ -1,22 +1,28 @@
 <script>
-  import {time, takeRandom} from './counter'
-  import Isquestionaire from './Isquestionaire.svelte';
+  import {time, takeRandom} from '../components/counter'
+  import Isquestionaire from '../components/Isquestionaire.svelte';
 
   const verb = ["Don't Stop", "Enjoy", "Start", "Continue", "Keep", "Dont' Cease"];
   const action = ["Running !", "🏃‍♀️🏃‍♀️", "🏃‍♀️", "🏃‍♂️", "🏃‍♂️🏃‍♀️" , "Pushing !", "Showing up !"]
 
   const text = takeRandom(verb) + ' ' + takeRandom(action)
-
-  
+  let expand = false
 </script>
 
-<div class="card card-glass p-6 m-auto space-y-6">
+<div class="card card-glass p-6 mx-6 sm:m-auto space-y-6 ">
   <h1 class="text-center text-6xl lg:text-9xl "> YES !</h1>
   <h2 class="text-center text-2xl lg:text-6xl">{text}</h2>
-  <h3 class="text-center text-xl lg:text-2xl"> {$time} till rest 🛋️ day </h3>
+  <h3 class="text-center text-xl lg:text-2xl">{$time} till rest 🛋️ day </h3>
+  <div class="flex justify-center">
+    <button class="btn btn-filled-primary btn-base w-3/4 m-auto align-center" on:click={()=>expand = !expand}> 
+        {expand? "less" : "Expand"}
+    </button>
+  </div>
 </div>
 
-<Isquestionaire></Isquestionaire>
+{#if expand}
+  <Isquestionaire/>
+{/if}
 
 <style>
 
@@ -67,15 +73,6 @@
   }
   
 }
-
-  body {
-    margin: 0;
-    font: 100% / 1.5 Raleway, sans-serif;
-    color: hsl(230, 100%, 95%);
-    background: linear-gradient(135deg, hsl(230, 40%, 12%), hsl(230, 20%, 7%));
-    height: 100vh;
-    display: flex;
-  }
 
   h1 {
     margin: auto;

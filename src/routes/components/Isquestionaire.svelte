@@ -1,9 +1,10 @@
 <script>
+  import { fade } from 'svelte/transition';
   let userRun = 0
   let excuse = 0 
 </script>
 
-<div class="card card-glass m-6 sm:m-auto space-y-6">
+<div transition:fade class="card card-glass m-6 sm:m-auto space-y-6">
   {#if userRun==0}
     <h3 class="text-center text-xl lg:text-2xl m-6"> Did you include running in todays plan? </h3>
     <div class="grid grid-cols-2  gap-4 m-6 pb-4">
@@ -14,7 +15,7 @@
     <h3 class="text-center text-xl lg:text-2xl m-6"> 😊😊 Congratulations! Keep pushing 😊😊 </h3>
   {:else if userRun==-1}
     {#if excuse==0}
-      <h3 class="text-center text-sm lg:text-2xl m-6"> Is your excuse in our comprehensive list? </h3>
+      <h3 class="text-center text-lg lg:text-2xl m-6"> Is your excuse in our comprehensive list? </h3>
       <div class="grid grid-cols-2 gap-4 m-6 pb-2">
         <button  class="btn btn-filled-primary btn-base w-full" on:click={()=>excuse=1}>Yes</button>
         <button  class="btn btn-filled-primary btn-base w-full" on:click={()=>excuse=-1}>No</button>
@@ -23,16 +24,14 @@
       <h3 class="text-center text-xl lg:text-2xl m-6"> List of valid excuses:</h3>
       <div class="desert">
         <div class="tumbleweed"></div>
-        <div class="tumbleweed"></div>
       </div>
     {:else if excuse==1}
-      <h3 class="text-center text-xl lg:text-2xl m-6"> 🏃 Good try, keep running 🏃 </h3>
+      <h3 class="text-center text-xl lg:text-2xl m-6">🏃 Good try, keep running 🏃</h3>
     {:else if excuse==-1}
-      <h3 class="text-center text-xl lg:text-2xl m-6"> 🏃 Bad luck, keep running!🏃 </h3>
+      <h3 class="text-center text-xl lg:text-2xl m-6">🏃 Bad luck, keep running!🏃</h3>
     {/if}
   {/if}
 </div>
-
 
 <style>
 
