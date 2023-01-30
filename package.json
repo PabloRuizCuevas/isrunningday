@@ -37,6 +37,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@rodneylab/svelte-social-icons": "^0.0.24",
 		"@sveltejs/adapter-static": "^1.0.4"
 	}
 }

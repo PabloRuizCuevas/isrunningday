@@ -6,7 +6,7 @@
 
 <div transition:fade class="card card-glass m-6 sm:m-auto space-y-6">
   {#if userRun==0}
-    <h3 class="text-center text-xl lg:text-2xl m-6"> Did you include running in todays plan? </h3>
+    <h3 class="text-center text-xl lg:text-2xl pt-4"> Did you include running in todays plan? </h3>
     <div class="grid grid-cols-2  gap-4 m-6 pb-4">
       <button  class="btn btn-filled-primary btn-base w-full" on:click={()=>userRun=1}>Yes</button>
       <button  class="btn btn-filled-primary btn-base w-full" on:click={()=>userRun=-1}>No</button>
@@ -16,7 +16,7 @@
   {:else if userRun==-1}
     {#if excuse==0}
       <h3 class="text-center text-lg lg:text-2xl m-6"> Is your excuse in our comprehensive list? </h3>
-      <div class="grid grid-cols-2 gap-4 m-6 pb-2">
+      <div class="grid grid-cols-2 gap-4 m-6 pb-4">
         <button  class="btn btn-filled-primary btn-base w-full" on:click={()=>excuse=1}>Yes</button>
         <button  class="btn btn-filled-primary btn-base w-full" on:click={()=>excuse=-1}>No</button>
       </div>

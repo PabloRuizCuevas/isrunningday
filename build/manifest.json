@@ -1,0 +1,33 @@
+{
+    "short_name": "Running?",
+    "name": "IsItRunningDay?",
+    "start_url": "/",
+    "icons": [
+      {
+        "src": "logo_512.png",
+        "type": "image/png",
+        "sizes": "512x512",
+        "purpose": "any"
+      },
+      {
+        "src": "logo_512.png",
+        "type": "image/png",
+        "sizes": "512x512",
+        "purpose": "maskable"
+      }
+    ],
+    "background_color": "rgb(228, 202, 219)",
+    "display": "standalone",
+    "scope": "https://accountr.rgon.es/",
+    "theme_color": "#f7eff4",
+    "shortcuts": [
+      {
+        "name": "Ticket Supermercado",
+        "short_name": "Ticket",
+        "description": "Escanear y guardar ticket",
+        "url": "/new?notes=Supermercado&openUpload=true",
+        "icons": [{ "src": "/logo_192.png", "sizes": "192x192" }]
+      }
+    ],
+    "description": "A simple ticket-storage system to ease accounting later on. Connects to a webdav server (like the one running inside nextcloud).    "
+}
