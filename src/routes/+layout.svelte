@@ -34,7 +34,7 @@
 				</div>
 				-->
 
-				<h3 class="text-center text-xl sm:text-2xl lg:text-4xl">Hiltop Hustlers </h3>
+				<h3 class="text-center text-xl sm:text-2xl lg:text-4xl">Hilltop Hustlers </h3>
 			</div>
 
 		</div>
